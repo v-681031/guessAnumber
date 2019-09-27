@@ -1,16 +1,13 @@
 import random
 while True:
-	print('input min guess nmber')
-	min_input = int(input())
-	print('input max guess number')
-	max_input = int(input())
+	min_input = int(input('input min guess number :'))
+	max_input = int(input('input max guess number :'))
 	if min_input < max_input:
 		break
 	else:
 		print('max number must > min number')
+print('guess a number between ', min_input, ' to', max_input, ' :')
 answer = random.randint(min_input, max_input)
-print('answer', answer)
-print('guess a number between ', min_input, ' to', max_input, ':')
 guess = int(input())
 ming = min_input
 maxg = max_input
@@ -20,7 +17,7 @@ while correct == False:
 	if guess >= min_input and guess <= max_input:
 		while True:
 			count += 1
-			print('this is ', count, 'guess!')
+			print('Guess count :', count, '!')
 			if answer == guess:
 				print('you are right! The answer is ', answer)
 				correct = True
